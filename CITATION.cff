@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+title: >-
+  IDS-ReComm: dataset and model evaluation for intrusion detection
+message: >-
+  If you use this software or the archived results, please cite the
+  associated paper.
+type: software
+authors:
+  - given-names: Ifrah
+    family-names: Sanober
+    affiliation: National Institute of Technology Srinagar
+    email: ifrah_2022phacse007@nitsri.ac.in
+  - given-names: Roohie Naaz
+    family-names: Mir
+    affiliation: National Institute of Technology Srinagar
+    email: naaz310@nitsri.ac.in
+license: MIT
+repository-code: 'https://github.com/ifrah-sanober/ids-recomm-evaluation'
+keywords:
+  - intrusion detection
+  - machine learning
+  - deep learning
+  - class imbalance
+  - benchmark datasets
+  - reproducibility
+preferred-citation:
+  type: article
+  title: >-
+    A Comprehensive Evaluation of IDS Datasets and Models with a Derived
+    Framework for Informed Dataset Selection: IDS-ReComm
+  authors:
+    - given-names: Ifrah
+      family-names: Sanober
+    - given-names: Roohie Naaz
+      family-names: Mir
+  journal: Advances in Computing and Engineering
+  year: 2026

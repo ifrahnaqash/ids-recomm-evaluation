@@ -1,0 +1,27 @@
+# data: never commit raw datasets or cleaned copies
+raw/
+cache/
+*.parquet
+*.csv.gz
+
+# per-run prediction arrays live on Zenodo, not here
+predictions/
+*.npz
+
+# scheduler and run logs
+logs/
+slurm-*.out
+*.err
+
+# python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+.ipynb_checkpoints/
+
+# os / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
