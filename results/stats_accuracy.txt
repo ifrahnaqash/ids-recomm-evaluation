@@ -1,0 +1,75 @@
+### ML models, imbalanced, metric = accuracy
+
+one-way ANOVA (original method):  F = 14.097, p = 1.298e-08, eta^2 = 0.125, omega^2 = 0.116
+repeated-measures ANOVA:          F(3,222) = 26.219, p = 1.479e-14, subjects = 75
+
+per dataset (mean, bootstrap 95% CI):
+   CIC-IDS2017           87.81  [ 82.15,  92.77]  n=75
+   HIKARI-2021           97.31  [ 96.33,  98.17]  n=75
+   NSL-KDD               94.96  [ 93.01,  96.62]  n=75
+   UNSW-NB15             85.37  [ 83.49,  86.95]  n=75
+
+pairwise (Holm-corrected):
+  * CIC-IDS2017        vs HIKARI-2021        diff =  -9.50 pp [-15.16,  -4.44]  p_holm = 0.003335  d = -0.57
+  * CIC-IDS2017        vs NSL-KDD            diff =  -7.15 pp [-12.98,  -1.82]  p_holm = 0.04191  d = -0.41
+    CIC-IDS2017        vs UNSW-NB15          diff =  +2.44 pp [ -3.45,  +7.70]  p_holm = 0.3925  d = +0.14
+    HIKARI-2021        vs NSL-KDD            diff =  +2.35 pp [ +0.38,  +4.45]  p_holm = 0.0544  d = +0.37
+  * HIKARI-2021        vs UNSW-NB15          diff = +11.94 pp [+10.04, +13.96]  p_holm = 1.315e-20  d = +1.93
+  * NSL-KDD            vs UNSW-NB15          diff =  +9.59 pp [ +7.01, +12.08]  p_holm = 5.172e-11  d = +1.21
+
+### ML models, balanced, metric = accuracy
+
+one-way ANOVA (original method):  F = 13.701, p = 2.157e-08, eta^2 = 0.122, omega^2 = 0.113
+repeated-measures ANOVA:          F(3,222) = 26.647, p = 9.275e-15, subjects = 75
+
+per dataset (mean, bootstrap 95% CI):
+   CIC-IDS2017           87.28  [ 81.68,  92.26]  n=75
+   HIKARI-2021           96.75  [ 95.58,  97.78]  n=75
+   NSL-KDD               94.95  [ 93.01,  96.62]  n=75
+   UNSW-NB15             85.30  [ 83.42,  86.88]  n=75
+
+pairwise (Holm-corrected):
+  * CIC-IDS2017        vs HIKARI-2021        diff =  -9.47 pp [-15.11,  -4.40]  p_holm = 0.003665  d = -0.56
+  * CIC-IDS2017        vs NSL-KDD            diff =  -7.68 pp [-13.51,  -2.34]  p_holm = 0.0254  d = -0.44
+    CIC-IDS2017        vs UNSW-NB15          diff =  +1.98 pp [ -3.87,  +7.26]  p_holm = 0.4868  d = +0.11
+    HIKARI-2021        vs NSL-KDD            diff =  +1.79 pp [ -0.28,  +3.98]  p_holm = 0.2079  d = +0.27
+  * HIKARI-2021        vs UNSW-NB15          diff = +11.45 pp [ +9.46, +13.53]  p_holm = 5.704e-19  d = +1.77
+  * NSL-KDD            vs UNSW-NB15          diff =  +9.66 pp [ +7.09, +12.13]  p_holm = 3.694e-11  d = +1.22
+
+### DL models, imbalanced, metric = accuracy
+
+one-way ANOVA (original method):  F = 2207.072, p = 3.720e-202, eta^2 = 0.957, omega^2 = 0.957
+repeated-measures ANOVA:          F(3,222) = 3283.421, p = 1.479e-183, subjects = 75
+
+per dataset (mean, bootstrap 95% CI):
+   CIC-IDS2017           99.48  [ 99.40,  99.55]  n=75
+   HIKARI-2021           99.44  [ 99.43,  99.44]  n=75
+   NSL-KDD               97.77  [ 97.40,  98.12]  n=75
+   UNSW-NB15             89.74  [ 89.60,  89.87]  n=75
+
+pairwise (Holm-corrected):
+    CIC-IDS2017        vs HIKARI-2021        diff =  +0.04 pp [ -0.04,  +0.11]  p_holm = 0.2852  d = +0.18
+  * CIC-IDS2017        vs NSL-KDD            diff =  +1.71 pp [ +1.35,  +2.08]  p_holm = 1.086e-13  d = +1.50
+  * CIC-IDS2017        vs UNSW-NB15          diff =  +9.74 pp [ +9.59,  +9.89]  p_holm = 1.045e-123  d = +20.50
+  * HIKARI-2021        vs NSL-KDD            diff =  +1.67 pp [ +1.31,  +2.03]  p_holm = 1.651e-13  d = +1.50
+  * HIKARI-2021        vs UNSW-NB15          diff =  +9.70 pp [ +9.56,  +9.83]  p_holm = 1.464e-91  d = +23.24
+  * NSL-KDD            vs UNSW-NB15          diff =  +8.03 pp [ +7.64,  +8.41]  p_holm = 1.233e-61  d = +6.75
+
+### DL models, balanced, metric = accuracy
+
+one-way ANOVA (original method):  F = 2168.779, p = 4.435e-201, eta^2 = 0.956, omega^2 = 0.956
+repeated-measures ANOVA:          F(3,222) = 3231.039, p = 8.469e-183, subjects = 75
+
+per dataset (mean, bootstrap 95% CI):
+   CIC-IDS2017           99.30  [ 99.20,  99.39]  n=75
+   HIKARI-2021           99.42  [ 99.41,  99.43]  n=75
+   NSL-KDD               97.80  [ 97.44,  98.15]  n=75
+   UNSW-NB15             89.57  [ 89.42,  89.71]  n=75
+
+pairwise (Holm-corrected):
+  * CIC-IDS2017        vs HIKARI-2021        diff =  -0.12 pp [ -0.22,  -0.03]  p_holm = 0.01427  d = -0.41   <-- significant but negligible
+  * CIC-IDS2017        vs NSL-KDD            diff =  +1.49 pp [ +1.13,  +1.87]  p_holm = 1.382e-11  d = +1.30
+  * CIC-IDS2017        vs UNSW-NB15          diff =  +9.73 pp [ +9.55,  +9.90]  p_holm = 3.238e-129  d = +17.92
+  * HIKARI-2021        vs NSL-KDD            diff =  +1.62 pp [ +1.27,  +1.98]  p_holm = 6.491e-13  d = +1.46
+  * HIKARI-2021        vs UNSW-NB15          diff =  +9.85 pp [ +9.71, +10.00]  p_holm = 9.299e-90  d = +21.88
+  * NSL-KDD            vs UNSW-NB15          diff =  +8.24 pp [ +7.84,  +8.61]  p_holm = 6.853e-64  d = +6.88
