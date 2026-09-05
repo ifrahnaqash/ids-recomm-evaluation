@@ -1,0 +1,29 @@
+{
+  "title": "IDS-ReComm: per-run model predictions for a 1,500-run evaluation of IDS datasets and models",
+  "upload_type": "dataset",
+  "description": "<p>Model outputs for all 1,500 experimental runs reported in \"A Comprehensive Evaluation of IDS Datasets and Models with a Derived Framework for Informed Dataset Selection: IDS-ReComm\".</p><p>Five classical machine learning models and five deep learning models were evaluated across four benchmark intrusion detection datasets (NSL-KDD, UNSW-NB15, CIC-IDS2017, HIKARI-2021) plus one identifier-removal ablation variant, under six configurations per dataset, repeated over five random seeds. Every transform, including recursive feature elimination, was fitted on training data alone.</p><p>The archive contains one compressed NumPy file per run, holding the ground-truth labels, predicted labels and predicted probabilities over the held-out test split. Any metric reported in the paper can be recomputed from these arrays without retraining, including metrics the paper does not report.</p><p>The four source datasets are not redistributed; their licences rest with their original providers. Code, aggregated metrics, statistical output and figures are available in the accompanying GitHub repository.</p>",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "creators": [
+    {"name": "Sanober, Ifrah", "affiliation": "National Institute of Technology Srinagar"},
+    {"name": "Mir, Roohie Naaz", "affiliation": "National Institute of Technology Srinagar"}
+  ],
+  "keywords": [
+    "intrusion detection",
+    "network security",
+    "machine learning",
+    "deep learning",
+    "class imbalance",
+    "benchmark datasets",
+    "reproducibility",
+    "NSL-KDD",
+    "UNSW-NB15",
+    "CIC-IDS2017",
+    "HIKARI-2021"
+  ],
+  "related_identifiers": [
+    {"identifier": "https://github.com/ifrah-sanober/ids-recomm-evaluation",
+     "relation": "isSupplementTo", "resource_type": "software"}
+  ],
+  "language": "eng"
+}
