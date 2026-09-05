@@ -177,10 +177,15 @@ Three properties of the distributed file affect any evaluation using it:
 
 ## Data archive
 
-Per-run predicted labels and probabilities for all 1,500 runs, and the cleaned
-parquet files, are archived at:
+Per-run predicted labels and probabilities for all 1,500 runs are archived at:
 
 **DOI: [ ZENODO DOI ]**
+
+The source datasets are not redistributed, in either this repository or the
+archive, because their licences rest with their original providers. The archive
+contains model outputs only: predicted labels, predicted probabilities, and the
+ground-truth labels of each test split. Anyone with the four datasets can rebuild
+the cleaned inputs by running `prepare.py`, which is deterministic given a seed.
 
 Download and unpack into `predictions/` to recompute any metric without retraining:
 
