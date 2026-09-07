@@ -1,0 +1,29 @@
+AUTOMATED CONSISTENCY AUDIT
+============================================================
+
+datasets present: ['CIC-IDS2017', 'HIKARI-2021', 'HIKARI-2021-noID', 'NSL-KDD', 'UNSW-NB15']
+seeds present:    [42, 43, 44, 45, 46]
+runs found:       1500
+runs expected:    1500  (for these datasets/seeds)
+full grid would be 1500 runs
+COMPLETE for the datasets and seeds present
+
+[1] F1 == harmonic(P,R):        PASS
+[2] no duplicated metric columns: PASS
+[3] ML metric identity:         PASS
+[3] DL metric identity:         PASS
+[4] all seeds present:            PASS
+[5] ML ROC-AUC range:           0.4711
+[5] DL ROC-AUC range:           0.0382 <-- CEILING, report effect sizes not just p-values
+
+[6] HIKARI-2021 identifier-removal ablation (mean F1):
+       CNN        with= 91.13  without= 90.58  delta= +0.55 pp
+       DT         with= 91.00  without= 90.57  delta= +0.43 pp
+       GNB        with= 34.44  without= 15.79  delta=+18.65 pp
+       GRU        with= 90.86  without= 89.98  delta= +0.88 pp
+       KNN        with= 89.53  without= 89.72  delta= -0.19 pp
+       LSTM       with= 90.86  without= 90.00  delta= +0.86 pp
+       MLP        with= 90.64  without= 89.76  delta= +0.88 pp
+       RF         with= 91.50  without= 91.37  delta= +0.13 pp
+       SVM        with= 73.10  without= 57.10  delta=+16.00 pp
+       SimpleRNN  with= 90.81  without= 90.23  delta= +0.58 pp
