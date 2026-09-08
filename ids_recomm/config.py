@@ -71,7 +71,7 @@ DL_MIN_DELTA = 1e-4                  # improvements below this do not reset pati
 # test shows CIC-IDS2017 hitting the cap, revisit before the full grid.
 
 # ---------------------------------------------------------------------------
-# >>> THE ONE SUBSTANTIVE PROTOCOL CHANGE - REQUIRES YOUR SIGN-OFF <<<
+# >>> THE ONE SUBSTANTIVE PROTOCOL CHANGE <<<
 # RBF-kernel SVC is O(n^2)-O(n^3). In the original run SVM on CIC-IDS2017 alone
 # consumed 86.8 of the 98.4 total compute hours (88%). Capping the SVM training
 # set at a stratified 100k sample, applied UNIFORMLY to all four datasets, keeps
