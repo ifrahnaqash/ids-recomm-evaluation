@@ -61,7 +61,7 @@ def compute_metrics(y_true, y_pred, y_prob) -> dict:
         f1_macro=f1_score(y_true, y_pred, average="macro", zero_division=0),
         mcc=matthews_corrcoef(y_true, y_pred),
         roc_auc=roc_auc_score(y_true, y_prob),
-        pr_auc=average_precision_score(y_true, y_prob),   # Reviewer C4
+        pr_auc=average_precision_score(y_true, y_prob),   
         tn=int(tn), fp=int(fp), fn=int(fn), tp=int(tp),
         n_test=int(len(y_true)), pos_rate=float(y_true.mean()),
     )
