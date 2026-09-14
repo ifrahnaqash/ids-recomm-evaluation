@@ -8,9 +8,7 @@ present, that the benign values actually match something, and prints the column
 headers so the drop lists in config.py can be checked against reality rather
 than against my guess at your CSV layout.
 
-It also flags columns whose name pattern suggests leakage. Every dataset except
-CIC-IDS2017 in your earlier IDS-ReComm work carried at least one leakage column
-producing perfect scores, so this is worth two minutes.
+It also flags columns whose name pattern suggests leakage. 
 """
 import sys
 
