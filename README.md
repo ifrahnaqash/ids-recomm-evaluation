@@ -20,7 +20,6 @@ ids_recomm/          pipeline: loading, preprocessing, models, metrics, analysis
 slurm/               batch submission scripts (SLURM)
 results/             per-run metrics, tidy and summary CSVs, statistical output
 figures/             every figure in the paper, and the script that draws them
-docs/                reproduction notes and a description of the audit checks
 ```
 
 Per-run predicted labels and probabilities for all 1,500 runs are ~0.6 GB and
@@ -39,7 +38,7 @@ transformation. SMOTE touches the training split only. No step downstream of the
 split observes a test row.
 
 This ordering matters. Fitting feature selection before the split leaks test labels
-into the feature choice, and the effect is not small: see `docs/AUDIT.md`.
+into the feature choice, which inflates every reported score.
 
 ---
 
@@ -139,8 +138,13 @@ aggregation, and all pass on the released result set:
 | Every configuration has all five seeds | partial runs reported as complete |
 | ROC-AUC range per family | ceiling effects that make significance tests uninformative |
 
-These are not decoration. The first two exist because the earlier version of this
-work contained exactly those two errors; `docs/AUDIT.md` describes them.
+The first three checks are worth explaining. Metrics for every model, classical and
+deep alike, are computed from stored predictions by the same library functions and
+returned in a keyed structure, so that a metric cannot be written into the wrong
+field and the two model families cannot diverge in definition. The checks verify
+that this holds across the whole result set rather than trusting it. They are cheap,
+they run on every aggregation, and they catch a class of error that is invisible in
+a plot.
 
 ---
 
