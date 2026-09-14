@@ -1,13 +1,7 @@
 """
 Loading, cleaning, and the CORRECTED preprocessing pipeline.
 
-The whole point of this file is the ordering. In the original notebooks the
-order was:
-
-    clean -> encode -> correlation filter -> RFE(full data + full labels)
-          -> train_test_split -> scaler.fit_transform(train)
-          -> scaler.fit_transform(test)   <-- refit on test
-          -> SMOTE(train)                 <-- this part was correct
+The whole point of this file is the ordering. 
 
 Here it is:
 
@@ -321,8 +315,8 @@ def materialise(dataset: str, seed: int, features: str, balance: str):
 
     sc = prep["scalers"][features]
     A_tr = sc.transform(A_tr)
-    A_va = sc.transform(A_va)   # transform, NOT fit_transform  <-- bug fix
-    A_te = sc.transform(A_te)   # transform, NOT fit_transform  <-- bug fix
+    A_va = sc.transform(A_va)   # transform, NOT fit_transform  
+    A_te = sc.transform(A_te)   # transform, NOT fit_transform  
 
     if balance == "balanced":
         sm = SMOTE(sampling_strategy="minority", random_state=seed)
