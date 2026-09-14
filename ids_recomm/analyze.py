@@ -1,17 +1,9 @@
 """
-Stage 5 - the statistical analysis Reviewer C asked for.
+Stage 5 - the statistical analysis.
 
     python analyze.py --metric f1
 
-What changed relative to the original analysis, and why.
-
-The original ran one-way ANOVA treating every model-configuration result as an
-independent observation. They are not independent: the same ten models are
-re-measured on all four datasets, so observations are paired within model. That
-inflates the F statistic, which is the most likely reason a design with 24
-experiments produced p ~ 1.2e-18.
-
-This script instead:
+This script:
   * runs repeated-measures ANOVA with model as the subject and dataset as the
     within-subject factor;
   * reports partial eta-squared and omega-squared next to every F, so a
