@@ -28,7 +28,7 @@ for _d in (CACHE_DIR, RESULT_DIR, PRED_DIR, LOG_DIR):
 # --------------------------------------------------------------------------
 # Protocol constants
 # --------------------------------------------------------------------------
-SEEDS = [42, 43, 44, 45, 46]        # 5 repeated runs (Reviewer C4)
+SEEDS = [42, 43, 44, 45, 46]        # 5 repeated runs
 TEST_SIZE = 0.30                     # unchanged from original study
 VAL_SIZE_OF_TRAIN = 0.10             # carved out of the 70% train, BEFORE SMOTE
 # Categorical columns with more than this many distinct values get ordinal
